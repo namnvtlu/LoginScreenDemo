@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LoginScreenDemo</string>
+    <string name="inputEmail">Input email,,,</string>
+    <string name="inputPassword">Input password ...</string>
+</resources>
