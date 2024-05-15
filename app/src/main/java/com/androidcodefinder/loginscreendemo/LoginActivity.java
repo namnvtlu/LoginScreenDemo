@@ -45,12 +45,13 @@ public class LoginActivity extends AppCompatActivity {
 
        // userRepository = new UserRepository();
 
-//        Intent intent = getIntent();
-//        if (null != intent){
-//            String strUsername = intent.getStringExtra("strUsername");
-//            String strPassword = intent.getStringExtra("strPassword");
-//            loginUser(strUsername, strPassword);
-//        }
+        Intent intent = getIntent();
+        if (null != intent){
+            String strUsername = intent.getStringExtra("strUsername");
+            String strPassword = intent.getStringExtra("strPassword");
+            if (!strUsername.equals("") && !strPassword.equals(""))
+                loginUser(strUsername, strPassword);
+        }
 
 //        Intent i = new Intent(Intent.ACTION_VIEW);
 //        i.setData(Uri.parse("https://google.com"));
@@ -61,8 +62,6 @@ public class LoginActivity extends AppCompatActivity {
 //        it.setData(Uri.parse("tel:0123456789"));
 //        startActivity(i);
 
-
-        //callback
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,10 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-
         Log.d(getApplication().getPackageName(), "Main Activity - Login Screen");
-
-
 
     }
 
