@@ -106,7 +106,6 @@ public class LoginActivity extends AppCompatActivity {
         userRepository = new UserRepository();
         if (null != userRepository && userRepository.checkExistedUser(user)) {
             Toast.makeText(LoginActivity.this, "OnLogin success!!!!", Toast.LENGTH_LONG).show();
-
             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(intent);
         }else{
